@@ -8,11 +8,11 @@
 
 © FiveM RealWorld 모든 권리 보유
 
-<img src="https://github.com/fivem-realw/vrp_rw_userlist/blob/master/logo.png?raw=true"></img>
+<img src="https://github.com/fivem-realw/vrp_rw_userlist/blob/master/screenshots/logo.png?raw=true"></img>
 
 - RealWorld Website: https://www.realw.kr
 - RealWorld Discord: https://discord.gg/realw
 - RealWorld Youtube: https://www.youtube.com/realw
 - RealWorld Server: connect s.realw.kr
 
-<img src="https://github.com/fivem-realw/vrp_rw_userlist/blob/master/screenshot.jpg?raw=true" width="100%"></img>
+<img src="https://github.com/fivem-realw/vrp_rw_userlist/blob/master/screenshots/userlist.jpg?raw=true" width="100%"></img>
