@@ -6,6 +6,13 @@
 
 3. 단, 해당 소스를 상업적인 목적으로 제3자에게 판매하는 행위를 금지합니다.
 
+- Fantastic design UI
+- Scrollable list
+- Unlimited number of users allowed
+- Job tab
+- Excellent server load protection
+- Tested by over 250 people
+
 © FiveM RealWorld 모든 권리 보유
 
 <img src="https://github.com/fivem-realw/vrp_rw_userlist/blob/master/screenshots/logo.png?raw=true"></img>
