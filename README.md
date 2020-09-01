@@ -27,6 +27,8 @@
 
 <h2>Function vRP.getUserList</h2>
 
+(Please add to the vrp/modules/identity.lua)
+
 ```lua
 
 MySQL.createCommand("vRP/get_user_identities", "SELECT * FROM vrp_user_identities WHERE user_id in (@user_ids)")
