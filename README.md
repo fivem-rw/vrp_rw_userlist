@@ -27,7 +27,7 @@
 
 <h2>Function vRP.getUserList</h2>
 
-(Please add to the vrp/modules/identity.lua)
+(Please add to vrp/modules/identity.lua)
 
 ```lua
 
