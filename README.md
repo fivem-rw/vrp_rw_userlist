@@ -90,23 +90,6 @@ function GetJobType(user_id)
   return jobType
 end
 
-function GetUserTitleInfo(user_id)
-  local tmpGroups = vRP.getUserGroups(user_id)
-  local selUserTitle = nil
-  for k, v in pairs(cfg_user_title.titles) do
-    for k2, v2 in pairs(tmpGroups) do
-      if k2 == v.group and v2 == true then
-        selUserTitle = v
-        break
-      end
-    end
-    if selUserTitle ~= nil then
-      break
-    end
-  end
-  return selUserTitle
-end
-
 function GetArrUserGroups(user_id)
   local tmpGroups = vRP.getUserGroups(user_id)
   local arrGroups = {}
@@ -150,7 +133,6 @@ function makeUserListTask()
           end
           userList[v.user_id].job = vRP.getUserGroupByType(userList[v.user_id].user_id, "job") or ""
           userList[v.user_id].jobType = GetJobType(userList[v.user_id].user_id) or ""
-          userList[v.user_id].userTitleInfo = GetUserTitleInfo(v.user_id)
           userList[v.user_id].groups = GetArrUserGroups(v.user_id)
           userList[v.user_id].phone = v.phone
           if _ >= #identities then
