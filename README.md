@@ -14,6 +14,7 @@
 - Tested by over 250 people
 
 © FiveM RealWorld. All rights reserved.
+
 © FiveM RealWorld 모든 권리 보유.
 
 <img src="https://github.com/fivem-realw/vrp_rw_userlist/blob/master/screenshots/logo.png?raw=true"></img>
