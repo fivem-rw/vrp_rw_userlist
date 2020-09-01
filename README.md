@@ -28,7 +28,7 @@
 
 <img src="https://github.com/fivem-realw/vrp_rw_userlist/blob/master/screenshots/userlist.jpg?raw=true" width="100%"></img>
 
-<h2>Function vRP.getUserList</h2>
+<h3>Function vRP.getUserList</h3>
 
 (Please add to vrp/modules/identity.lua)
 
@@ -172,5 +172,82 @@ function vRP.getUserList(cbr)
   task({userList})
 end
 ```
+
+<h3>use `vrp_mysql` module</h3>
+
+- The below error is displayed.
+
+<img src="https://forum.cfx.re/uploads/default/original/4X/6/9/9/699fb307fb8c7823fb09c2ed7123ac1c026d4ca8.png">
+
+- How to fix
+
+Our server is using ghmattimysql.
+
+vrp_mysql needs syntax modification.
+
+Try changing the vRP.getUserIdentities() function as shown below.
+
+```lua
+function joinStrings(list, sep)
+  if sep == nil then
+    sep = ""
+  end
+
+  local str = ""
+  local count = 0
+  local size = #list
+  for k, v in pairs(list) do
+    count = count + 1
+    str = str .. v
+    if count < size then
+      str = str .. sep
+    end
+  end
+
+  return str
+end
+
+function vRP.getUserIdentities(arr_user_ids, cbr)
+  if cbr == nil then
+    return
+  end
+  local task = Task(cbr)
+  if arr_user_ids == nil or #arr_user_ids <= 0 then
+    task({})
+    return
+  end
+  local szUserId = joinStrings(arr_user_ids, ",")
+  MySQL.query(
+    "vRP/get_user_identities",
+    {user_ids = szUserId},
+    function(rows, affected)
+      if rows == nil then
+        task({})
+      else
+        task({rows})
+      end
+    end
+  )
+end
+```
+
+<h3>Not found `htmlEntities`</h3>
+
+- The below error is displayed.
+
+<img src="https://forum.cfx.re/uploads/default/original/4X/d/7/9/d79f886535d711087bb11be2a42db52ac6009fcc.png">
+
+- How to fix
+
+Location --> vrp/lib/htmlEntities.lua
+
+<a href="https://forum.cfx.re/uploads/short-url/oGTcRWRJ2rj0zehrF0I1Vwq7Lir.lua">htmlEntities.lua</a>
+
+Add it to the top of identity.lua.
+
+```lua
+local htmlEntities = module("lib/htmlEntities")
+```
+
 
 If you have any other questions, please contact fivemrealw@gmail.com
