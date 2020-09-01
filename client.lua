@@ -65,7 +65,7 @@ function UpdatePlayerTable(playerList, maxClients)
 		end
 
 		local icon = Config.jobIcons[v.jobType] or Config.jobIcons["person"]
-		v.nickname = removeEmoji(v.nickname)
+		--v.nickname = removeEmoji(v.nickname)
 		v.job = icon .. " " .. v.job
 
 		if typeCount[v.jobType] then
