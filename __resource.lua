@@ -12,7 +12,6 @@ version "1.0.0"
 dependency "vrp"
 
 shared_scripts {
-	"@evp/main.lua",
 	"@vrp/lib/utils.lua",
 	"config.lua"
 }
