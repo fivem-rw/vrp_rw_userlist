@@ -6,6 +6,8 @@
 
 3. 단, 해당 소스를 상업적인 목적으로 제3자에게 판매하는 행위를 금지합니다.
 
+* 해당 소스가 정상적으로 작동하기 위해서는 맨 하단에 첨부한 vRP.getUserList() 가 필요합니다.
+
 - Fantastic design UI
 - Scrollable list
 - Unlimited number of users allowed
